@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       git-repo:
-        description: Git repo (Optional, defaults to <your name>/aniyomi-extensions
+        description: Git repo (Optional, defaults to <your name>/tachiyomi-extensions
         default: ''
         required: false
       git-ref:
@@ -34,7 +34,7 @@ jobs:
         if: env.REPO == ''
         run: |
           set -e
-          echo "REPO=${{ github.repository_owner }}/aniyomi-extensions" >> $GITHUB_ENV
+          echo "REPO=${{ github.repository_owner }}/tachiyomi-extensions" >> $GITHUB_ENV
 
       - name: Clone Repository (Latest)
         uses: actions/checkout@v3
